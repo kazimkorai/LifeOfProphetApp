@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SahihBukhariDetailzActivity">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </include>
+
+
+    <LinearLayout
+        android:id="@+id/linearScrool"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:background="@drawable/back_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/ivfooter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivQuran"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvArabic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Arabic"
+                    android:layout_margin="6dp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/linearAds"
+                    app:layout_constraintTop_toBottomOf="@+id/linearToolbar"
+                    app:layout_constraintVertical_bias="0.07999998" />
+
+                <TextView
+                    android:textSize="22sp"
+                    android:layout_margin="6dp"
+                    android:textColor="@android:color/black"
+                    android:text="Translation"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp" />
+
+                <TextView
+                    android:id="@+id/tvEng"
+                    android:layout_margin="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="English"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/linearAds"
+                    app:layout_constraintTop_toBottomOf="@+id/tvArabic" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivfooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:src="@drawable/bg_footer_bar"
+        app:layout_constraintBottom_toTopOf="@+id/linearAds"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/ivbookmark"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_bookmark"
+
+        app:layout_constraintBottom_toBottomOf="@+id/ivfooter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ivfooter"
+        app:layout_constraintTop_toTopOf="@+id/ivfooter"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <ImageView
+        android:id="@+id/ivplay"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_share"
+        app:layout_constraintBottom_toBottomOf="@+id/ivfooter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivfooter"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <LinearLayout
+        android:id="@+id/linearAds"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+        <FrameLayout
+            android:id="@+id/fadplaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivQuran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/quran_image"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:layout_editor_absoluteX="-100dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

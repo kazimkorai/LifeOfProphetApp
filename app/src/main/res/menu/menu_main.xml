@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bookmarks"
+        android:title="BookMarks"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/share"
+        android:title="Share"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/rate_us"
+        android:title="Rate Us"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/privacy_policy"
+        android:title="Privacy Policy"
+        app:showAsAction="collapseActionView" />
+</menu>

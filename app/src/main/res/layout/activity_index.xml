@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.IndexActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:background="@android:color/white"
+            android:layout_height="70dp">
+
+
+
+            <TextView
+                android:id="@+id/tvTittle"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_marginLeft="1dp"
+
+                android:layout_weight="1.5"
+                android:textSize="20sp"
+                android:text="@string/app_name"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp" />
+            <ImageView
+                android:id="@+id/ivRateus"
+                android:src="@drawable/iv_rate"
+                android:layout_gravity="center"
+                android:layout_weight=".3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"/>
+
+            <ImageView
+                android:id="@+id/ivDot"
+                android:src="@drawable/iv_share"
+                android:layout_gravity="center"
+                android:layout_weight=".3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/selector_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/ivSahihBukhari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_listbar"
+
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <ImageView
+        android:id="@+id/btnSahiBukhari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/albukhari"
+        android:text="Sahih Bukhari"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSahihBukhari"
+        app:layout_constraintEnd_toEndOf="@+id/ivSahihBukhari"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="@+id/ivSahihBukhari"
+        app:layout_constraintTop_toTopOf="@+id/ivSahihBukhari"
+        app:layout_constraintVertical_bias="0.31" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sahih Bukhari"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSahihBukhari"
+        app:layout_constraintEnd_toEndOf="@+id/ivSahihBukhari"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toEndOf="@+id/btnSahiBukhari"
+        app:layout_constraintTop_toTopOf="@+id/ivSahihBukhari"
+        app:layout_constraintVertical_bias="0.41000003" />
+
+
+    <ImageView
+        android:id="@+id/ivSahiMuslim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_listbar"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivSahihBukhari"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <ImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/almuslim"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSahiMuslim"
+        app:layout_constraintEnd_toEndOf="@+id/ivSahiMuslim"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="@+id/ivSahiMuslim"
+        app:layout_constraintTop_toTopOf="@+id/ivSahiMuslim"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sahih Muslim"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSahiMuslim"
+        app:layout_constraintEnd_toEndOf="@+id/ivSahiMuslim"
+        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintStart_toStartOf="@+id/ivSahiMuslim"
+        app:layout_constraintTop_toTopOf="@+id/ivSahiMuslim"
+        app:layout_constraintVertical_bias="0.38" />
+
+
+
+
+    <ImageView
+        android:id="@+id/ivLifeOfMuhmmad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Life Of Muhammad"
+        android:background="@drawable/bg_listbar"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivSahiMuslim"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_life"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLifeOfMuhmmad"
+        app:layout_constraintEnd_toEndOf="@+id/ivLifeOfMuhmmad"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="@+id/ivLifeOfMuhmmad"
+        app:layout_constraintTop_toBottomOf="@+id/ivSahiMuslim"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Life of Muhammad"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLifeOfMuhmmad"
+        app:layout_constraintEnd_toEndOf="@+id/ivLifeOfMuhmmad"
+        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintStart_toStartOf="@+id/ivLifeOfMuhmmad"
+        app:layout_constraintTop_toTopOf="@+id/ivLifeOfMuhmmad"
+        app:layout_constraintVertical_bias="0.32" />
+
+
+    <ImageView
+        android:id="@+id/ivNames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_listbar"
+        android:text="Life Of Muhammad"
+        app:layout_constraintBottom_toTopOf="@+id/linearAds"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_life"
+        app:layout_constraintBottom_toBottomOf="@+id/ivNames"
+        app:layout_constraintEnd_toEndOf="@+id/ivNames"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/ivNames"
+        app:layout_constraintTop_toBottomOf="@+id/ivLifeOfMuhmmad"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="99 Names Of Prophet"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivNames"
+        app:layout_constraintEnd_toEndOf="@+id/ivNames"
+        app:layout_constraintHorizontal_bias="0.74"
+        app:layout_constraintStart_toStartOf="@+id/ivNames"
+        app:layout_constraintTop_toBottomOf="@+id/ivLifeOfMuhmmad" />
+
+    <LinearLayout
+        android:id="@+id/linearAds"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <FrameLayout
+            android:id="@+id/fadplaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
